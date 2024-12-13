@@ -1,0 +1,46 @@
+{% extends "base.html" %}
+
+{% block content %}
+<div class="row justify-content-center">
+    <div class="col-md-8">
+        <div class="card">
+            <div class="card-header">
+                <h4 class="mb-0">해커톤 프로토타입</h4>
+            </div>
+            <div class="card-body">
+                <form id="stockQueryForm">
+                    <div class="mb-3">
+                        <label for="userId" class="form-label">아이디</label>
+                        <input type="text" class="form-control" id="userId" required>
+                    </div>
+                    <div class="mb-3">
+                        <label for="password" class="form-label">비밀번호</label>
+                        <input type="password" class="form-control" id="password" required>
+                    </div>
+                    <div class="mb-3">
+                        <label for="query" class="form-label">질문</label>
+                        <textarea class="form-control" id="query" rows="3" required></textarea>
+                    </div>
+                    <button type="submit" class="btn btn-primary" id="submitBtn">
+                        <span class="spinner-border spinner-border-sm d-none" role="status" aria-hidden="true"></span>
+                        전송
+                    </button>
+                </form>
+
+                <div class="mt-4">
+                    <div id="errorMessage" class="alert alert-danger d-none"></div>
+                    <div id="resultArea" class="d-none">
+                        <h5>API json 응답 결과</h5>
+                        <div class="table-responsive">
+                            <table class="table">
+                                <tbody id="resultTable">
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock %}
