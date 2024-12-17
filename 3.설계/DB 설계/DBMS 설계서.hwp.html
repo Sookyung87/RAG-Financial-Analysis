@@ -1,0 +1,1015 @@
+<!DOCTYPE html>
+<!-- saved from url=(0193)https://www.polarisoffice.com/editor/whale/hwp?name=DBMS+%EC%84%A4%EA%B3%84%EC%84%9C+%281%29.hwpx&doc=https%3A%2F%2Fviewer.whale.naver.com%2Fmobile-upload%2F26dd835e-b0af-46e3-82c0-ebaa83d2c96e -->
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8"><script src="./DBMS 설계서.hwp_files/cb=gapi.loaded_0" async=""></script><script src="./DBMS 설계서.hwp_files/all.js.다운로드" async="" crossorigin="anonymous"></script><script type="text/javascript" async="" src="./DBMS 설계서.hwp_files/js"></script><script id="facebook-jssdk" async="" src="./DBMS 설계서.hwp_files/all(1).js.다운로드"></script>
+
+
+<meta http-equiv="X-UA-Compatible" content="IE=Edge">
+<meta name="viewport" content="user-scalable=yes, maximum-scale=1.0, width=1024">
+<meta property="qc:admins" content="24106102647607412137661356375636">
+	<meta property="wb:webmaster" content="4aca1f03c35f1679">
+<meta name="ROBOTS" content="NOINDEX, NOFOLLOW">
+ 
+<meta property="og:title" content="">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://www.polarisoffice.com/editor/whale/hwp">
+<meta property="og:image" content="">
+<meta property="og:description" content="Shared with Polaris Office"> 
+
+<meta name="twitter:title" content="">
+<meta name="twitter:site" content="Polaris Office">
+<meta name="twitter:creator" content="Polaris Office Corp">
+<meta name="twitter:image" content="">
+<meta name="twitter:description" content="Shared with Polaris Office">
+<meta name="apple-itunes-app" content="app-id=698070860">
+	<meta name="keywords" content="폴라리스 오피스, ios, android, 오피스, 무료 오피스, 모바일 오피스, 워드, 엑셀, 파워포인트, 비즈니스, 클라우드, 스토리지, Microsoft Office, iPhone, iPad, OneDrive、kingsoft office、office365、google drive、dropbox, 마이크로소프트 오피스, polaris office, word, excel, powerpoint"> 
+<title>DBMS 설계서 (1).hwp</title>
+
+<link rel="icon" href="https://polink-static-contents.polarisoffice.com/web/resources/image/favicon_16x16_new.png">
+<link rel="shortcut icon" type="image/x-icon" href="https://polink-static-contents.polarisoffice.com/web/resources/image/favicon_16x16_new.ico?20240729">
+<link rel="stylesheet" href="./DBMS 설계서.hwp_files/pcshare_popup.css">
+<link rel="stylesheet" href="./DBMS 설계서.hwp_files/common.css">
+<link rel="stylesheet" href="./DBMS 설계서.hwp_files/renewal.css">
+<link rel="stylesheet" href="./DBMS 설계서.hwp_files/content.css">
+<link rel="stylesheet" href="./DBMS 설계서.hwp_files/layout.css">
+<link rel="stylesheet" href="./DBMS 설계서.hwp_files/login.css">
+<!-- <link rel="stylesheet" href="https://polink-static-contents.polarisoffice.com/web/common/css/search.css?20240729">-->	 
+<link rel="stylesheet" href="./DBMS 설계서.hwp_files/popup.css">
+<link rel="stylesheet" href="./DBMS 설계서.hwp_files/style.css">
+
+<script async="" src="./DBMS 설계서.hwp_files/gtm.js.다운로드"></script><script id="twitter-wjs" src="./DBMS 설계서.hwp_files/widgets.js.다운로드"></script><script type="text/javascript" integrity="sha384-pY2pkwHaLM/6UIseFHVU3hOKr6oAvhLcdYkoRZyaMDWLjpM6B7nTxtOdE823WAOQ" crossorigin="anonymous" async="" src="./DBMS 설계서.hwp_files/analytics-browser-2.11.0-min.js.gz"></script><script type="text/javascript" src="./DBMS 설계서.hwp_files/jquery-1.8.3.min.js.다운로드"></script>
+<script type="text/javascript">
+	var gUA = 'mozilla/5.0 (windows nt 10.0; win64; x64) applewebkit/537.36 (khtml, like gecko) chrome/128.0.0.0 whale/3.28.266.14 safari/537.36';
+	var publicViewer = false; 
+	var local = "ko_KR";  
+	var g_sessionTimeout = "1620000";
+	var ischina = 'false'; 
+	var domain = location.hostname;
+	var versionlist = "false";
+	var _OwnerID = ""; 
+	if(!_OwnerID)
+		_OwnerID = ""; 
+	var _OwnerName ="";
+		if(!_OwnerName)
+			_OwnerName ="";
+	var glastrevision = "";
+	glastrevision = +glastrevision;
+	var isPCHOME = (gUA.search("polarispcoffice") != -1  || gUA.indexOf('podialog') != -1);
+	var isPchome = isPCHOME;
+	
+	if (domain == 'polarisoffice.com' || domain == 'www.polarisoffice.com' || domain == 'link.polarisoffice.com' || domain == 'www.polarisoffice.com.cn')  {
+		if(ischina == 'true'){
+			var _hmt = _hmt || [];
+			(function()
+			{ var hm = document.createElement("script"); hm.src = "//hm.baidu.com/hm.js?41a2eb67a0d03d445ed0ec5fd409c3a8"; var s = document.getElementsByTagName("script")[0]; s.parentNode.insertBefore(hm, s); }
+			)();
+		}
+		
+	}
+</script>
+<script type="text/javascript" src="./DBMS 설계서.hwp_files/cloudfrontsetting.js.다운로드"></script>
+<script type="text/javascript" src="./DBMS 설계서.hwp_files/pcstring.min.js.다운로드"></script>
+<script type="text/javascript" src="./DBMS 설계서.hwp_files/Errorfile.js.다운로드"></script>
+<script type="text/javascript" src="./DBMS 설계서.hwp_files/po-local.js.다운로드"></script>
+<script type="text/javascript">
+		var gUserId = null; 
+    	var gFullName = null;
+        var gUserLevel = null;
+        var gUserEmail = null;
+    	var userEmail = null;
+    	var userName = null;
+	</script>
+<script type="text/javascript">
+function checkChromeCast(thisObj) {
+	if(window.parent.document.getElementById('loadingWrapper')) {
+		return true;
+	}
+	return false;
+}
+var _chromeCast = checkChromeCast();	
+</script>
+<!--[if lt IE 9]> 
+<script type="text/javascript" src="https://polink-static-contents.polarisoffice.com/web/common/lib/html5shiv.js?20240729"></script>
+<script type="text/javascript" src="https://polink-static-contents.polarisoffice.com/web/common/lib/respond.src.js"></script>
+<![endif]-->
+<script type="text/javascript">
+  !function(){"use strict";!function(e,t){var r=e.amplitude||{_q:[],_iq:{}};if(r.invoked)e.console&&console.error&&console.error("Amplitude snippet has been loaded.");else{var n=function(e,t){e.prototype[t]=function(){return this._q.push({name:t,args:Array.prototype.slice.call(arguments,0)}),this}},s=function(e,t,r){return function(n){e._q.push({name:t,args:Array.prototype.slice.call(r,0),resolve:n})}},o=function(e,t,r){e._q.push({name:t,args:Array.prototype.slice.call(r,0)})},i=function(e,t,r){e[t]=function(){if(r)return{promise:new Promise(s(e,t,Array.prototype.slice.call(arguments)))};o(e,t,Array.prototype.slice.call(arguments))}},a=function(e){for(var t=0;t<g.length;t++)i(e,g[t],!1);for(var r=0;r<m.length;r++)i(e,m[r],!0)};r.invoked=!0;var c=t.createElement("script");c.type="text/javascript",c.integrity="sha384-pY2pkwHaLM/6UIseFHVU3hOKr6oAvhLcdYkoRZyaMDWLjpM6B7nTxtOdE823WAOQ",c.crossOrigin="anonymous",c.async=!0,c.src="https://cdn.amplitude.com/libs/analytics-browser-2.11.0-min.js.gz",c.onload=function(){e.amplitude.runQueuedFunctions||console.log("[Amplitude] Error: could not load SDK")};var u=t.getElementsByTagName("script")[0];u.parentNode.insertBefore(c,u);for(var p=function(){return this._q=[],this},l=["add","append","clearAll","prepend","set","setOnce","unset","preInsert","postInsert","remove","getUserProperties"],d=0;d<l.length;d++)n(p,l[d]);r.Identify=p;for(var f=function(){return this._q=[],this},v=["getEventProperties","setProductId","setQuantity","setPrice","setRevenue","setRevenueType","setEventProperties"],y=0;y<v.length;y++)n(f,v[y]);r.Revenue=f;var g=["getDeviceId","setDeviceId","getSessionId","setSessionId","getUserId","setUserId","setOptOut","setTransport","reset","extendSession"],m=["init","add","remove","track","logEvent","identify","groupIdentify","setGroup","revenue","flush"];a(r),r.createInstance=function(e){return r._iq[e]={_q:[]},a(r._iq[e]),r._iq[e]},e.amplitude=r}}(window,document)}();
+
+</script>
+<!--  <script src="https://cdn.amplitude.com/libs/plugin-session-replay-browser-1.4.0-min.js.gz"></script>-->
+<script>
+/*const sessionReplayTracking = window.sessionReplay.plugin({
+ sampleRate: 0, // 100% sample rate, should reduce for production traffic.
+});
+window.amplitude.add(sessionReplayTracking);*/
+if(typeof window.amplitude != 'undefined' && window.amplitude){
+	window.amplitude.init('36797087f29a87d11cf8a7451befab2b', {
+	  autocapture: {
+		    attribution: false,
+		    pageViews: true,
+		    sessions: true,
+		    formInteractions: true,
+		    fileDownloads: true,
+		    elementInteractions: true,
+		  },
+	}).promise.then(function(result){
+		console.log('init!!');
+	});
+}
+</script><style type="text/css" data-fbcssmodules="css:fb.css.base css:fb.css.dialog css:fb.css.iframewidget">.fb_hidden{position:absolute;top:-10000px;z-index:10001}.fb_reposition{overflow:hidden;position:relative}.fb_invisible{display:none}.fb_reset{background:none;border:0px;border-spacing:0;color:#000;cursor:auto;direction:ltr;font-family:'lucida grande', tahoma, verdana, arial, sans-serif;font-size:11px;font-style:normal;font-variant:normal;font-weight:normal;letter-spacing:normal;line-height:1;margin:0;overflow:visible;padding:0;text-align:left;text-decoration:none;text-indent:0;text-shadow:none;text-transform:none;visibility:visible;white-space:normal;word-spacing:normal}.fb_reset>div{overflow:hidden}@keyframes fb_transform{from{opacity:0;transform:scale(.95)}to{opacity:1;transform:scale(1)}}.fb_animate{animation:fb_transform .3s forwards}
+.fb_hidden{position:absolute;top:-10000px;z-index:10001}.fb_reposition{overflow:hidden;position:relative}.fb_invisible{display:none}.fb_reset{background:none;border:0px;border-spacing:0;color:#000;cursor:auto;direction:ltr;font-family:'lucida grande', tahoma, verdana, arial, sans-serif;font-size:11px;font-style:normal;font-variant:normal;font-weight:normal;letter-spacing:normal;line-height:1;margin:0;overflow:visible;padding:0;text-align:left;text-decoration:none;text-indent:0;text-shadow:none;text-transform:none;visibility:visible;white-space:normal;word-spacing:normal}.fb_reset>div{overflow:hidden}@keyframes fb_transform{from{opacity:0;transform:scale(.95)}to{opacity:1;transform:scale(1)}}.fb_animate{animation:fb_transform .3s forwards}
+.fb_dialog{background:rgba(82, 82, 82, .7);position:absolute;top:-10000px;z-index:10001}.fb_dialog_advanced{border-radius:8px;padding:10px}.fb_dialog_content{background:#fff;color:#373737}.fb_dialog_close_icon{background:url(https://connect.facebook.net/rsrc.php/v4/yq/r/IE9JII6Z1Ys.png) no-repeat scroll 0 0 transparent;cursor:pointer;display:block;height:15px;position:absolute;right:18px;top:17px;width:15px}.fb_dialog_mobile .fb_dialog_close_icon{left:5px;right:auto;top:5px}.fb_dialog_padding{background-color:transparent;position:absolute;width:1px;z-index:-1}.fb_dialog_close_icon:hover{background:url(https://connect.facebook.net/rsrc.php/v4/yq/r/IE9JII6Z1Ys.png) no-repeat scroll 0 -15px transparent}.fb_dialog_close_icon:active{background:url(https://connect.facebook.net/rsrc.php/v4/yq/r/IE9JII6Z1Ys.png) no-repeat scroll 0 -30px transparent}.fb_dialog_iframe{line-height:0}.fb_dialog_content .dialog_title{background:#6d84b4;border:1px solid #365899;color:#fff;font-size:14px;font-weight:bold;margin:0}.fb_dialog_content .dialog_title>span{background:url(https://connect.facebook.net/rsrc.php/v4/yd/r/Cou7n-nqK52.gif) no-repeat 5px 50%;float:left;padding:5px 0 7px 26px}body.fb_hidden{height:100%;left:0px;margin:0px;overflow:visible;position:absolute;top:-10000px;transform:none;width:100%}.fb_dialog.fb_dialog_mobile.loading{background:url(https://connect.facebook.net/rsrc.php/v4/ya/r/3rhSv5V8j3o.gif) white no-repeat 50% 50%;min-height:100%;min-width:100%;overflow:hidden;position:absolute;top:0;z-index:10001}.fb_dialog.fb_dialog_mobile.loading.centered{background:none;height:auto;min-height:initial;min-width:initial;width:auto}.fb_dialog.fb_dialog_mobile.loading.centered #fb_dialog_loader_spinner{width:100%}.fb_dialog.fb_dialog_mobile.loading.centered .fb_dialog_content{background:none}.loading.centered #fb_dialog_loader_close{clear:both;color:#fff;display:block;font-size:18px;padding-top:20px}#fb-root #fb_dialog_ipad_overlay{background:rgba(0, 0, 0, .4);bottom:0;left:0;min-height:100%;position:absolute;right:0;top:0;width:100%;z-index:10000}#fb-root #fb_dialog_ipad_overlay.hidden{display:none}.fb_dialog.fb_dialog_mobile.loading iframe{visibility:hidden}.fb_dialog_mobile .fb_dialog_iframe{position:sticky;top:0}.fb_dialog_content .dialog_header{background:linear-gradient(from(#738aba), to(#2c4987));border-bottom:1px solid;border-color:#043b87;box-shadow:white 0px 1px 1px -1px inset;color:#fff;font:bold 14px Helvetica, sans-serif;text-overflow:ellipsis;text-shadow:rgba(0, 30, 84, .296875) 0px -1px 0px;vertical-align:middle;white-space:nowrap}.fb_dialog_content .dialog_header table{height:43px;width:100%}.fb_dialog_content .dialog_header td.header_left{font-size:12px;padding-left:5px;vertical-align:middle;width:60px}.fb_dialog_content .dialog_header td.header_right{font-size:12px;padding-right:5px;vertical-align:middle;width:60px}.fb_dialog_content .touchable_button{background:linear-gradient(from(#4267B2), to(#2a4887));background-clip:padding-box;border:1px solid #29487d;border-radius:3px;display:inline-block;line-height:18px;margin-top:3px;max-width:85px;padding:4px 12px;position:relative}.fb_dialog_content .dialog_header .touchable_button input{background:none;border:none;color:#fff;font:bold 12px Helvetica, sans-serif;margin:2px -12px;padding:2px 6px 3px 6px;text-shadow:rgba(0, 30, 84, .296875) 0px -1px 0px}.fb_dialog_content .dialog_header .header_center{color:#fff;font-size:16px;font-weight:bold;line-height:18px;text-align:center;vertical-align:middle}.fb_dialog_content .dialog_content{background:url(https://connect.facebook.net/rsrc.php/v4/y9/r/jKEcVPZFk-2.gif) no-repeat 50% 50%;border:1px solid #4a4a4a;border-bottom:0;border-top:0;height:150px}.fb_dialog_content .dialog_footer{background:#f5f6f7;border:1px solid #4a4a4a;border-top-color:#ccc;height:40px}#fb_dialog_loader_close{float:left}.fb_dialog.fb_dialog_mobile .fb_dialog_close_icon{visibility:hidden}#fb_dialog_loader_spinner{animation:rotateSpinner 1.2s linear infinite;background-color:transparent;background-image:url(https://connect.facebook.net/rsrc.php/v4/yD/r/t-wz8gw1xG1.png);background-position:50% 50%;background-repeat:no-repeat;height:24px;width:24px}@keyframes rotateSpinner{0%{transform:rotate(0deg)}100%{transform:rotate(360deg)}}
+.fb_iframe_widget{display:inline-block;position:relative}.fb_iframe_widget span{display:inline-block;position:relative;text-align:justify}.fb_iframe_widget iframe{position:absolute}.fb_iframe_widget_fluid_desktop,.fb_iframe_widget_fluid_desktop span,.fb_iframe_widget_fluid_desktop iframe{max-width:100%}.fb_iframe_widget_fluid_desktop iframe{min-width:220px;position:relative}.fb_iframe_widget_lift{z-index:1}.fb_iframe_widget_fluid{display:inline}.fb_iframe_widget_fluid span{width:100%}</style></head>
+<body class="whale hwp edit ko"><div id="fb-root" class=" fb_reset"><div style="position: absolute; top: -10000px; width: 0px; height: 0px;"><div></div></div></div>
+	<div id="wrapper" style="height: 100%;">
+	<script type="text/javascript">
+    	var sockurl = null;
+    	gUserLevel = null;
+        </script>
+<script type="text/javascript">
+	var logsize = ""; 
+ 	/* var logsharecount = "";  */
+	var loguserid = ""; 
+	var logfileId = "";
+	var logisShared = "";
+	var gviewCount = "";
+	var noticeid = "";
+	var gIsTeamFile = ("" == 'true') ? true : false;
+	var gDocPosition = "";
+	
+	if(window.console == undefined) {
+		console = {
+			log : function() {},
+			debug : function() {}
+		}
+	}
+	if(window.console) {
+		if(window.console.debug == undefined) {
+			console.debug = function() {}
+		}
+		if(window.console.log == undefined) {
+			console.log = function() {}
+		}
+	} 
+</script>
+<script type="text/javascript" src="./DBMS 설계서.hwp_files/network.js.다운로드"></script>
+<script type="text/javascript" src="./DBMS 설계서.hwp_files/common_default.js.다운로드"></script>
+<script type="text/javascript" src="./DBMS 설계서.hwp_files/ads.js.다운로드"></script>
+<script type="text/javascript" src="./DBMS 설계서.hwp_files/polling_v2.js.다운로드"></script>
+<link rel="stylesheet" href="./DBMS 설계서.hwp_files/webview.css">
+
+<script type="text/javascript"> 
+    var convertingStatus = "";
+    var convertingTotalpage = ""; 
+    var convertingCurrentpage = ""; 
+    var gfileID = "";
+    var publicViewer = false;
+    var _viewtype = "";
+    if(_viewtype == "weblink_view" || ((location.pathname.indexOf('/fileview/')<0 || location.pathname.indexOf('/d/') < 0)&& _viewtype==""))
+	   publicViewer = true;
+    var docTitle = "";
+    var gdocName = docTitle;
+    var handWritingTotalPage = "";
+	var handWritingPageNum = "";
+	var grevision = "";
+	grevision = +grevision;
+	var gISPublic = "";
+	var gdocext = docTitle.substr(docTitle.lastIndexOf(".")+1, docTitle.length).toLowerCase();
+	var ispoformat = false;
+	var poformatId = null, poformatSd = null;
+	var haveNewCommand = false;	
+	var originalFileName = "";
+	if(gdocext=='word') {
+		ispoformat = true;
+		haveNewCommand = ("" == 'true') ? true : false;
+		poformatId = "";
+		poformatSd = parseInt("");
+	}
+	var gVendorType = "whale";
+	var gFileFormat = "hwp";
+	var gMode = "edit";
+	if (gUA.indexOf('iphone') >= 0 || gUA.indexOf('ipad') >= 0 || gUA.indexOf('android') >= 0){
+		gMode = '';
+	}
+	$('body').addClass(gVendorType + ' ' + gFileFormat + ' ' + gMode);
+</script>
+<div id="calculatelayout"></div>
+<div id="weboffice_container" style="position: absolute; left: 0px; bottom: 0px; width: calc(100%);"><iframe style="width: 100%; height: 100%; border: none;" src="./DBMS 설계서.hwp_files/saved_resource.html"><meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1.0, user-scalable=no"></iframe></div> <!-- element to render Polaris Web Office-->
+<div id="viewcontents" style="width:100%;">
+	<p class="progress" style="display:none;"><em>0</em>/0</p>
+	<!-- <div class="ad_viwer">
+		<div class="inner">
+			<a href="#" id="ad_close"><img src="https://polink-static-contents.polarisoffice.com/web/resources/image/Polaris/new/button/pop_close.png" alt="닫기"></a>
+		</div>
+	</div> -->	
+</div>
+
+<div id="webView" class="word" data-type="word">
+<!-- whale -->
+	<header class="simple_view">
+		<div class="header">
+			<div class="title">
+				<dl>
+					<dt class="document">DBMS 설계서 (1).hwp</dt>
+					<dd class="favorite whale">
+						<a href="https://www.polarisoffice.com/editor/whale/hwp?name=DBMS+%EC%84%A4%EA%B3%84%EC%84%9C+%281%29.hwpx&amp;doc=https%3A%2F%2Fviewer.whale.naver.com%2Fmobile-upload%2F26dd835e-b0af-46e3-82c0-ebaa83d2c96e#" id="favstatus" class="favorite_star">중요 문서</a>
+						<ul class="favorite">
+							<li class="favorite"><span>중요 표시</span></li>
+						</ul>
+					</dd>
+					<dd class="save">
+						<a href="https://www.polarisoffice.com/editor/whale/hwp?name=DBMS+%EC%84%A4%EA%B3%84%EC%84%9C+%281%29.hwpx&amp;doc=https%3A%2F%2Fviewer.whale.naver.com%2Fmobile-upload%2F26dd835e-b0af-46e3-82c0-ebaa83d2c96e#" class=""><span></span></a>
+						<ul>
+							<li id="save_ctrlS"><span>저장</span></li>
+						</ul>
+					</dd>
+					
+				</dl>
+			</div>
+			<div class="util_menu">
+				<ul>
+					<li><a href="https://www.polarisoffice.com/editor/whale/hwp?name=DBMS+%EC%84%A4%EA%B3%84%EC%84%9C+%281%29.hwpx&amp;doc=https%3A%2F%2Fviewer.whale.naver.com%2Fmobile-upload%2F26dd835e-b0af-46e3-82c0-ebaa83d2c96e#" class="pc_open"><span>PC Office로 열기</span></a></li>
+<li><a href="https://www.polarisoffice.com/editor/whale/hwp?name=DBMS+%EC%84%A4%EA%B3%84%EC%84%9C+%281%29.hwpx&amp;doc=https%3A%2F%2Fviewer.whale.naver.com%2Fmobile-upload%2F26dd835e-b0af-46e3-82c0-ebaa83d2c96e#" class="file_down"><span>저장 및 다운로드</span></a></li>
+		<li id="whale_tip" style=""><a href="https://www.polarisoffice.com/editor/whale/hwp?name=DBMS+%EC%84%A4%EA%B3%84%EC%84%9C+%281%29.hwpx&amp;doc=https%3A%2F%2Fviewer.whale.naver.com%2Fmobile-upload%2F26dd835e-b0af-46e3-82c0-ebaa83d2c96e#" class="tip"><span>사용 TIP</span></a></li>
+<li id="whale_login"><a href="https://www.polarisoffice.com/editor/whale/hwp?name=DBMS+%EC%84%A4%EA%B3%84%EC%84%9C+%281%29.hwpx&amp;doc=https%3A%2F%2Fviewer.whale.naver.com%2Fmobile-upload%2F26dd835e-b0af-46e3-82c0-ebaa83d2c96e#" class="login"><span>POLARIS OFFICE 로그인/회원 가입</span></a></li>
+</ul>
+			</div>			
+			<div class="conPop user free" style="display:none">
+				<div class="box">
+					<div class="user_info">
+						<span class="service_name service">...</span>
+						<dl>
+							<dt><img src="./DBMS 설계서.hwp_files/img_setting.png" alt="사용자"><span class="bg"></span></dt>
+							<dd>
+								<strong class="user_name">...</strong>
+								<span class="mail user_mail">...</span>
+							</dd>
+						</dl>
+					</div>
+
+					<!-- credit -->
+					<div class="ai_credit" style="display: none;">
+						<div class="point">
+							<dl>
+								<dt>Credit</dt>
+								<dd><span class="userCredit">0</span></dd>
+							</dl>
+						</div>
+					</div>
+					<!-- //credit -->
+					<div class="non_profile">
+						<div class="normal" style="display:none"><a href="https://www.polarisoffice.com/editor/whale/hwp?name=DBMS+%EC%84%A4%EA%B3%84%EC%84%9C+%281%29.hwpx&amp;doc=https%3A%2F%2Fviewer.whale.naver.com%2Fmobile-upload%2F26dd835e-b0af-46e3-82c0-ebaa83d2c96e#" class="addMyInfo">회원 정보 추가 시, <em> AI 크레딧</em> 지급</a></div>
+						<div class="ai_plus" style="display:none"><a href="https://www.polarisoffice.com/editor/whale/hwp?name=DBMS+%EC%84%A4%EA%B3%84%EC%84%9C+%281%29.hwpx&amp;doc=https%3A%2F%2Fviewer.whale.naver.com%2Fmobile-upload%2F26dd835e-b0af-46e3-82c0-ebaa83d2c96e#" class="addMyInfo">회원 정보를 추가해 보세요!</a></div>
+					</div>				
+
+					<div class="service_account">
+						<ul>
+							<li><a style="cursor: pointer;">폴라리스 드라이브</a></li>
+							<li><a style="cursor: pointer;">계정 정보</a></li>
+							<li><a style="cursor: pointer;">다운로드</a></li>
+						</ul>
+						<div class="b_box"><a href="https://www.polarisoffice.com/editor/whale/hwp?name=DBMS+%EC%84%A4%EA%B3%84%EC%84%9C+%281%29.hwpx&amp;doc=https%3A%2F%2Fviewer.whale.naver.com%2Fmobile-upload%2F26dd835e-b0af-46e3-82c0-ebaa83d2c96e#" id="logout">로그아웃</a></div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</header>
+	<!-- whale -->
+	<p id="toastpop" class="try"><span></span></p>
+	<footer>
+		<section class="f_lt">
+			<ul class="paging">
+				<li><a id="btnstart" class="pprev"></a></li>
+				<li><a id="btnleft" class="prev"></a></li>
+				<li class="paging"><span class="num"></span><input type="text" style="display:none"></li>
+				<li><a id="btnright" class="next"></a></li>
+				<li><a id="btnend" class="nnext"></a></li>
+			</ul>
+		</section>
+		<section class="f_rt">
+			<ul class="btn">
+				<li><a id="handwrite">그리기 메모 보기</a></li>
+			</ul>
+			<dl class="size">
+				<dt><a href="https://www.polarisoffice.com/editor/whale/hwp?name=DBMS+%EC%84%A4%EA%B3%84%EC%84%9C+%281%29.hwpx&amp;doc=https%3A%2F%2Fviewer.whale.naver.com%2Fmobile-upload%2F26dd835e-b0af-46e3-82c0-ebaa83d2c96e#" id="btnresizezooomin" class="minus">-</a><span class="per">100%</span><a href="https://www.polarisoffice.com/editor/whale/hwp?name=DBMS+%EC%84%A4%EA%B3%84%EC%84%9C+%281%29.hwpx&amp;doc=https%3A%2F%2Fviewer.whale.naver.com%2Fmobile-upload%2F26dd835e-b0af-46e3-82c0-ebaa83d2c96e#" id="btnresizezooomout" class="plus">+</a></dt>
+				<dd style="display:none">
+					<p class="per">
+						<a id="screenzoom25" style="cursor:pointer">25%</a>
+						<a id="screenzoom50" style="cursor:pointer">50%</a>
+						<a id="screenzoom75" style="cursor:pointer">75%</a>
+						<a id="screenzoom100" style="cursor:pointer" class="check">100%</a>
+						<a id="screenzoom125" style="cursor:pointer">125%</a>
+						<a id="screenzoom150" style="cursor:pointer">150%</a>
+						<a id="screenzoom175" style="cursor:pointer">175%</a>
+						<a id="screenzoom200" style="cursor:pointer">200%</a>
+					</p>
+					<p class="customize">
+						<a id="screenheight" class="border">페이지에 맞춤</a>
+						<a id="screenwidth" style="cursor:pointer">너비에 맞춤</a>
+					</p>
+				</dd>
+			</dl>
+		</section>
+	</footer>
+	<div class="nova_floating">
+					<a href="https://www.polarisoffice.com/editor/whale/hwp?name=DBMS+%EC%84%A4%EA%B3%84%EC%84%9C+%281%29.hwpx&amp;doc=https%3A%2F%2Fviewer.whale.naver.com%2Fmobile-upload%2F26dd835e-b0af-46e3-82c0-ebaa83d2c96e#" class="ask_nova unsigned">
+								<img src="./DBMS 설계서.hwp_files/ic_nova_purple.svg" alt="ico_nova">
+								<span>언제 어디서나 AI가 필요할 때 <br> NOVA에 무엇이든 물어보세요!</span>
+							</a>
+							<div class="btn_wrap">
+								<a href="https://www.polarisoffice.com/editor/whale/hwp?name=DBMS+%EC%84%A4%EA%B3%84%EC%84%9C+%281%29.hwpx&amp;doc=https%3A%2F%2Fviewer.whale.naver.com%2Fmobile-upload%2F26dd835e-b0af-46e3-82c0-ebaa83d2c96e#" class="login">로그인하기</a>
+								<a href="https://www.polarisoffice.com/editor/whale/hwp?name=DBMS+%EC%84%A4%EA%B3%84%EC%84%9C+%281%29.hwpx&amp;doc=https%3A%2F%2Fviewer.whale.naver.com%2Fmobile-upload%2F26dd835e-b0af-46e3-82c0-ebaa83d2c96e#" class="btn_close"></a>
+							</div>
+						</div>
+			<div>hwp</div>
+	<div class="menu">
+				<ul class="depth1">
+		<li class="edit"><a href="https://www.polarisoffice.com/editor/whale/hwp?name=DBMS+%EC%84%A4%EA%B3%84%EC%84%9C+%281%29.hwpx&amp;doc=https%3A%2F%2Fviewer.whale.naver.com%2Fmobile-upload%2F26dd835e-b0af-46e3-82c0-ebaa83d2c96e#" class="menu_04" title="PC Office로 열기">열기</a>
+						<ul class="depth2">
+								<li onclick="openPCOffice(event);"><a class="" href="https://www.polarisoffice.com/editor/whale/hwp?name=DBMS+%EC%84%A4%EA%B3%84%EC%84%9C+%281%29.hwpx&amp;doc=https%3A%2F%2Fviewer.whale.naver.com%2Fmobile-upload%2F26dd835e-b0af-46e3-82c0-ebaa83d2c96e#">프로그램 열기</a></li>
+								<li onclick="InstallPCApp(event);"><a class="" href="https://www.polarisoffice.com/editor/whale/hwp?name=DBMS+%EC%84%A4%EA%B3%84%EC%84%9C+%281%29.hwpx&amp;doc=https%3A%2F%2Fviewer.whale.naver.com%2Fmobile-upload%2F26dd835e-b0af-46e3-82c0-ebaa83d2c96e#">프로그램 설치</a></li>
+						</ul>
+					</li>
+					<li class="share"><a href="https://www.polarisoffice.com/editor/whale/hwp?name=DBMS+%EC%84%A4%EA%B3%84%EC%84%9C+%281%29.hwpx&amp;doc=https%3A%2F%2Fviewer.whale.naver.com%2Fmobile-upload%2F26dd835e-b0af-46e3-82c0-ebaa83d2c96e#" class="menu_01">공유</a>
+						<ul class="depth2 share">
+							<li><a href="https://www.polarisoffice.com/editor/whale/hwp?name=DBMS+%EC%84%A4%EA%B3%84%EC%84%9C+%281%29.hwpx&amp;doc=https%3A%2F%2Fviewer.whale.naver.com%2Fmobile-upload%2F26dd835e-b0af-46e3-82c0-ebaa83d2c96e#" id="chatshow">공유하기</a></li>
+							<li><a href="https://www.polarisoffice.com/editor/whale/hwp?name=DBMS+%EC%84%A4%EA%B3%84%EC%84%9C+%281%29.hwpx&amp;doc=https%3A%2F%2Fviewer.whale.naver.com%2Fmobile-upload%2F26dd835e-b0af-46e3-82c0-ebaa83d2c96e#" id="weblinkcopy">링크 보내기</a></li>
+						</ul>
+					</li>
+					<li class="download"><a style="cursor:pointer;" class="menu_02">다운로드</a>
+						<ul class="depth2 download">
+							<li><a href="https://www.polarisoffice.com/editor/whale/hwp?name=DBMS+%EC%84%A4%EA%B3%84%EC%84%9C+%281%29.hwpx&amp;doc=https%3A%2F%2Fviewer.whale.naver.com%2Fmobile-upload%2F26dd835e-b0af-46e3-82c0-ebaa83d2c96e#" id="localDownload" class="btn_download"><span>컴퓨터에 다운로드</span></a></li>
+							<li><a href="https://www.polarisoffice.com/editor/whale/hwp?name=DBMS+%EC%84%A4%EA%B3%84%EC%84%9C+%281%29.hwpx&amp;doc=https%3A%2F%2Fviewer.whale.naver.com%2Fmobile-upload%2F26dd835e-b0af-46e3-82c0-ebaa83d2c96e#" id="mydriveDownload" class="btn_drive"><span>폴라리스 드라이브에 저장</span></a></li>
+							</ul>
+					</li>
+				<li><a href="https://www.polarisoffice.com/editor/whale/hwp?name=DBMS+%EC%84%A4%EA%B3%84%EC%84%9C+%281%29.hwpx&amp;doc=https%3A%2F%2Fviewer.whale.naver.com%2Fmobile-upload%2F26dd835e-b0af-46e3-82c0-ebaa83d2c96e#" class="menu_03">코멘트<span></span></a></li>
+					<li><a href="https://www.polarisoffice.com/editor/whale/hwp?name=DBMS+%EC%84%A4%EA%B3%84%EC%84%9C+%281%29.hwpx&amp;doc=https%3A%2F%2Fviewer.whale.naver.com%2Fmobile-upload%2F26dd835e-b0af-46e3-82c0-ebaa83d2c96e#" id="nova_panel_btn" class="menu_05 nova" onclick="ai_nova.addIframe(ai_nova.IframeClass.PANEL)">NOVA</a></li>
+					</ul>
+			</div>
+			<!--  문서 열고 있을 때  -->
+				<div class="doc_open">
+					<div class="new_txt">
+
+		                <div class="inner">
+		                    <span id="doc_icon" class="icon"><img src="./DBMS 설계서.hwp_files/app_doc.png" alt="docx/doc"></span>
+		                    <p id="document_title" class="t01"><span> marketing teamdocument_name_design_team marketing team_주간업무보고서_디자인팀_document.docx</span></p>
+		                </div>
+		                <div class="inner02">
+		                    <p class="t02">Polaris Office PC 버전에서 문서를 여는 중입니다.<br>잠시만 기다려 주세요.</p>
+		                    <p class="t03"><img src="./DBMS 설계서.hwp_files/loader.gif" alt="로딩중"></p>
+		                    <a href="https://www.polarisoffice.com/editor/whale/hwp?name=DBMS+%EC%84%A4%EA%B3%84%EC%84%9C+%281%29.hwpx&amp;doc=https%3A%2F%2Fviewer.whale.naver.com%2Fmobile-upload%2F26dd835e-b0af-46e3-82c0-ebaa83d2c96e#" class="d_open">PC 버전에서 문서 열기</a>
+		                </div>
+		
+		                 <div class="inner03">
+		                     <ul class="t04">
+		                        <li>Polaris Office PC 버전을 아직 설치하지 않으셨나요?&nbsp;<a id="opendoc_installPC" href="https://www.polarisoffice.com/editor/whale/hwp?name=DBMS+%EC%84%A4%EA%B3%84%EC%84%9C+%281%29.hwpx&amp;doc=https%3A%2F%2Fviewer.whale.naver.com%2Fmobile-upload%2F26dd835e-b0af-46e3-82c0-ebaa83d2c96e#">PC 버전 설치</a></li>
+		                        <li>Web에서 문서를 보시겠습니까?&nbsp;<a id="web_open" href="https://www.polarisoffice.com/editor/whale/hwp?name=DBMS+%EC%84%A4%EA%B3%84%EC%84%9C+%281%29.hwpx&amp;doc=https%3A%2F%2Fviewer.whale.naver.com%2Fmobile-upload%2F26dd835e-b0af-46e3-82c0-ebaa83d2c96e#">Web에서 문서 열기</a></li>
+		                    </ul>
+		                </div>
+		            </div>
+					
+					</div>
+				<!--  // 문서 열고 있을 때  끝 -->
+			<!--  google ad -->
+			<div class="ad_google03 adsense" id="share_doc_ad"></div>
+	        <!--  google ad -->
+
+			<!--  google ad	
+			<div class="ad_google02 adsense" id="viewer_comment_ad" style="display:none">
+				////////////////////////////광고
+				<div class="ad_box"></div>
+			</div>	
+			google ad end -->
+		</div>	
+<div id="pc_restore"></div>
+<div id="pc_download"></div>
+<div id="pc_saveResotre"></div>
+<div id="pc_notsaveResotre"></div>
+
+<!-- 파일 메뉴 -->
+<div class="whale_panel init" id="fileMenu" style="display:none;">
+	<div class="file_menu">
+		<a href="https://www.polarisoffice.com/editor/whale/hwp?name=DBMS+%EC%84%A4%EA%B3%84%EC%84%9C+%281%29.hwpx&amp;doc=https%3A%2F%2Fviewer.whale.naver.com%2Fmobile-upload%2F26dd835e-b0af-46e3-82c0-ebaa83d2c96e#" class="close">close</a>
+		<ul class="menu">
+			<li><a href="https://www.polarisoffice.com/editor/whale/hwp?name=DBMS+%EC%84%A4%EA%B3%84%EC%84%9C+%281%29.hwpx&amp;doc=https%3A%2F%2Fviewer.whale.naver.com%2Fmobile-upload%2F26dd835e-b0af-46e3-82c0-ebaa83d2c96e#" class="on" id="menu_new">새 문서</a></li>
+			<li><a href="https://www.polarisoffice.com/editor/whale/hwp?name=DBMS+%EC%84%A4%EA%B3%84%EC%84%9C+%281%29.hwpx&amp;doc=https%3A%2F%2Fviewer.whale.naver.com%2Fmobile-upload%2F26dd835e-b0af-46e3-82c0-ebaa83d2c96e#" id="menu_open">문서 열기</a></li>
+			<li><a href="https://www.polarisoffice.com/editor/whale/hwp?name=DBMS+%EC%84%A4%EA%B3%84%EC%84%9C+%281%29.hwpx&amp;doc=https%3A%2F%2Fviewer.whale.naver.com%2Fmobile-upload%2F26dd835e-b0af-46e3-82c0-ebaa83d2c96e#" id="menu_download">다운로드</a></li>
+			<li><a href="https://www.polarisoffice.com/editor/whale/hwp?name=DBMS+%EC%84%A4%EA%B3%84%EC%84%9C+%281%29.hwpx&amp;doc=https%3A%2F%2Fviewer.whale.naver.com%2Fmobile-upload%2F26dd835e-b0af-46e3-82c0-ebaa83d2c96e#" id="menu_save">폴라리스 드라이브에 저장</a></li>
+			<li><a href="https://www.polarisoffice.com/editor/whale/hwp?name=DBMS+%EC%84%A4%EA%B3%84%EC%84%9C+%281%29.hwpx&amp;doc=https%3A%2F%2Fviewer.whale.naver.com%2Fmobile-upload%2F26dd835e-b0af-46e3-82c0-ebaa83d2c96e#" id="menu_share">공유하기</a></li>
+		</ul>
+</div>
+	
+	<div class="file_tab" style="display: flex" id="newDoc">
+		<div class="template_menu">
+			<h2 class="tit">새 문서</h2>
+			<a href="https://www.polarisoffice.com/editor/whale/hwp?name=DBMS+%EC%84%A4%EA%B3%84%EC%84%9C+%281%29.hwpx&amp;doc=https%3A%2F%2Fviewer.whale.naver.com%2Fmobile-upload%2F26dd835e-b0af-46e3-82c0-ebaa83d2c96e#wordList" class="word on">
+				<dl>
+					<dt>워드</dt>
+					<dd>docx 확장자의 워드 문서를 만듭니다.</dd>
+				</dl>
+			</a>
+			<a href="https://www.polarisoffice.com/editor/whale/hwp?name=DBMS+%EC%84%A4%EA%B3%84%EC%84%9C+%281%29.hwpx&amp;doc=https%3A%2F%2Fviewer.whale.naver.com%2Fmobile-upload%2F26dd835e-b0af-46e3-82c0-ebaa83d2c96e#sheetList" class="sheet">
+				<dl>
+					<dt>시트</dt>
+					<dd>xlsx 확장자의 시트 문서를 만듭니다.</dd>
+				</dl>
+			</a>
+			<a href="https://www.polarisoffice.com/editor/whale/hwp?name=DBMS+%EC%84%A4%EA%B3%84%EC%84%9C+%281%29.hwpx&amp;doc=https%3A%2F%2Fviewer.whale.naver.com%2Fmobile-upload%2F26dd835e-b0af-46e3-82c0-ebaa83d2c96e#slideList" class="slide">
+				<dl>
+					<dt>슬라이드</dt>
+					<dd>pptx 확장자의 슬라이드 문서를 만듭니다.</dd>
+				</dl>
+			</a>
+			<a href="https://www.polarisoffice.com/editor/whale/hwp?name=DBMS+%EC%84%A4%EA%B3%84%EC%84%9C+%281%29.hwpx&amp;doc=https%3A%2F%2Fviewer.whale.naver.com%2Fmobile-upload%2F26dd835e-b0af-46e3-82c0-ebaa83d2c96e#hwpList" class="hwp">
+						<dl>
+							<dt>HWP</dt>
+							<dd>hwp 확장자의 한글 문서를 만듭니다.</dd>
+						</dl>
+					</a>
+			</div>
+		<div class="template_group">
+			<div id="wordList" class="thum_list" style="display:flex">
+				<dl class="blank" data-id="word">
+					<dt><img src="./DBMS 설계서.hwp_files/blank_sheet.png"></dt>
+					<dd>blank</dd>
+				</dl>
+			</div>
+			<div id="sheetList" class="thum_list">
+				<dl class="blank" data-id="sheet">
+					<dt><img src="./DBMS 설계서.hwp_files/blank_sheet.png"></dt>
+					<dd>blank</dd>
+				</dl>
+			</div>
+			<div id="slideList" class="thum_list">
+				<dl class="blank" data-id="slide">
+					<dt><img src="./DBMS 설계서.hwp_files/blank_slide.png"></dt>
+					<dd>blank</dd>
+				</dl>
+			</div>
+			<div id="hwpList" class="thum_list">
+				<dl class="blank" data-id="hwp">
+					<dt><img src="./DBMS 설계서.hwp_files/blank_sheet.png"></dt>
+					<dd>blank</dd>
+				</dl>
+			</div>
+
+		</div>
+	</div>
+
+	<div class="file_tab" id="openDoc" style="display: none;">
+		<div class="open_type_menu">
+			<h2 class="tit">문서 열기</h2>
+			<a href="https://www.polarisoffice.com/editor/whale/hwp?name=DBMS+%EC%84%A4%EA%B3%84%EC%84%9C+%281%29.hwpx&amp;doc=https%3A%2F%2Fviewer.whale.naver.com%2Fmobile-upload%2F26dd835e-b0af-46e3-82c0-ebaa83d2c96e#" class="doc recent on"><span>최근 문서</span></a>
+			<a href="https://www.polarisoffice.com/editor/whale/hwp?name=DBMS+%EC%84%A4%EA%B3%84%EC%84%9C+%281%29.hwpx&amp;doc=https%3A%2F%2Fviewer.whale.naver.com%2Fmobile-upload%2F26dd835e-b0af-46e3-82c0-ebaa83d2c96e#" class="doc my_computer"><span>내 컴퓨터</span></a>
+			<a href="https://www.polarisoffice.com/editor/whale/hwp?name=DBMS+%EC%84%A4%EA%B3%84%EC%84%9C+%281%29.hwpx&amp;doc=https%3A%2F%2Fviewer.whale.naver.com%2Fmobile-upload%2F26dd835e-b0af-46e3-82c0-ebaa83d2c96e#" class="doc my_polaris"><span>폴라리스 드라이브</span></a>
+			<a href="https://www.polarisoffice.com/editor/whale/hwp?name=DBMS+%EC%84%A4%EA%B3%84%EC%84%9C+%281%29.hwpx&amp;doc=https%3A%2F%2Fviewer.whale.naver.com%2Fmobile-upload%2F26dd835e-b0af-46e3-82c0-ebaa83d2c96e#" class="doc shareList"><span>공유 문서</span></a>
+			<a href="https://www.polarisoffice.com/editor/whale/hwp?name=DBMS+%EC%84%A4%EA%B3%84%EC%84%9C+%281%29.hwpx&amp;doc=https%3A%2F%2Fviewer.whale.naver.com%2Fmobile-upload%2F26dd835e-b0af-46e3-82c0-ebaa83d2c96e#" class="doc favorite"><span>중요 문서</span></a>
+		</div>
+		<!-- 최근 문서 -->
+		<div class="list_document">
+			<div class="file_list recent_list">
+				<h3 class="tit">최근 문서</h3>
+				 <div class="no_doc" style="display: none"><span class="doc">아직 열어본 문서가 없어요.</span></div>
+			</div>
+			<div class="file_list my_polaris_list" style="display: none">
+				<h3 class="tit">폴라리스 드라이브</h3>
+				<div class="drive_loc">
+</div>
+				<div class="no_doc" style="display: none"><span class="doc">문서가 없습니다.</span></div>
+
+			</div>
+			<div class="file_list share_list" style="display:none">
+				<h3 class="tit">공유 문서</h3>
+				<div class="no_doc"><span class="share">아직 다른 사람과 공유한 문서가 없어요.</span></div>
+			</div>
+			<div class="file_list favorite_list" style="display:none">
+				<h3 class="tit">중요 문서</h3>
+				<div class="no_doc"><span class="favorite">중요한 문서를 만들어보세요.</span></div>
+			</div>
+		</div>
+	</div>
+
+</div>
+<!-- //파일 메뉴 -->
+
+
+<!-- 문서 열기 메뉴 오픈 -->
+<div class="layer_modal" id="open_menu_pop" style="display: none;">
+	<div class="inner new_open_pop">
+		<a href="https://www.polarisoffice.com/editor/whale/hwp?name=DBMS+%EC%84%A4%EA%B3%84%EC%84%9C+%281%29.hwpx&amp;doc=https%3A%2F%2Fviewer.whale.naver.com%2Fmobile-upload%2F26dd835e-b0af-46e3-82c0-ebaa83d2c96e#" class="close"><span>Close</span></a>
+		<div>
+			<img src="./DBMS 설계서.hwp_files/open_kr.png" class="ko" alt="">
+			<img src="./DBMS 설계서.hwp_files/open_en.png" class="global" alt="">
+		</div>
+		<a href="https://www.polarisoffice.com/editor/whale/hwp?name=DBMS+%EC%84%A4%EA%B3%84%EC%84%9C+%281%29.hwpx&amp;doc=https%3A%2F%2Fviewer.whale.naver.com%2Fmobile-upload%2F26dd835e-b0af-46e3-82c0-ebaa83d2c96e#" class="detail">detail</a>
+		<a href="https://www.polarisoffice.com/editor/whale/hwp?name=DBMS+%EC%84%A4%EA%B3%84%EC%84%9C+%281%29.hwpx&amp;doc=https%3A%2F%2Fviewer.whale.naver.com%2Fmobile-upload%2F26dd835e-b0af-46e3-82c0-ebaa83d2c96e#" class="do_not_show">do not show</a>
+	</div>
+</div>
+<!-- //문서 열기 메뉴 오픈 --><!-- 다운로드 -->
+<div class="layer_modal" id="down_modal" style="display: none;">
+	<div class="inner">
+		<a href="https://www.polarisoffice.com/editor/whale/hwp?name=DBMS+%EC%84%A4%EA%B3%84%EC%84%9C+%281%29.hwpx&amp;doc=https%3A%2F%2Fviewer.whale.naver.com%2Fmobile-upload%2F26dd835e-b0af-46e3-82c0-ebaa83d2c96e#" class="close"><span>Close</span></a>
+		<div class="down_state">
+			<p class="ing">문서 다운로드 준비 중입니다.</p>
+			<p class="complete">다운로드 준비가 완료되었습니다.</p>
+		</div>
+		<div class="ads" style="display: none;">광고</div>
+	</div>
+</div>
+<!-- //다운로드 -->
+
+<!-- 다운로드 (whale) -->
+<div class="layer_modal" id="whale_down_modal" style="display: none;">
+	<div class="inner">
+		<a href="https://www.polarisoffice.com/editor/whale/hwp?name=DBMS+%EC%84%A4%EA%B3%84%EC%84%9C+%281%29.hwpx&amp;doc=https%3A%2F%2Fviewer.whale.naver.com%2Fmobile-upload%2F26dd835e-b0af-46e3-82c0-ebaa83d2c96e#" class="close"><span>Close</span></a>
+		<div class="whale_down_state">
+<p class="c1 complete">다운로드 준비가 완료되었습니다.</p>
+			<p class="c2">폴라리스 오피스 로그인으로<br>더 효율적인 문서 편집 서비스를 경험해보세요!</p>
+		</div>
+		<div class="whale_button">
+			<div class="whale_btn_box login">
+				<a href="https://www.polarisoffice.com/editor/whale/hwp?name=DBMS+%EC%84%A4%EA%B3%84%EC%84%9C+%281%29.hwpx&amp;doc=https%3A%2F%2Fviewer.whale.naver.com%2Fmobile-upload%2F26dd835e-b0af-46e3-82c0-ebaa83d2c96e#" class="btn primary"><span>혜택받고 로그인 하기</span></a>
+			</div>
+			<div class="whale_btn_box download">
+				<a href="https://www.polarisoffice.com/editor/whale/hwp?name=DBMS+%EC%84%A4%EA%B3%84%EC%84%9C+%281%29.hwpx&amp;doc=https%3A%2F%2Fviewer.whale.naver.com%2Fmobile-upload%2F26dd835e-b0af-46e3-82c0-ebaa83d2c96e#" class="btn white"><span>다운로드만 하기</span></a>
+			</div>
+		</div>
+		<div class="ads" style="display: none;">광고</div>
+		<div class="whale_benefit" style="">
+			<strong class="tit">Whale 회원 대상 특별 혜택</strong>
+			<p class="c1">지금 폴라리스오피스 <em>회원가입</em>하고<br>Pro 서비스 7일 <em>무료 이용권</em> 받으세요</p>
+			<p class="c2">폴라리스 Pro 이용권?<br>무료로 PDF부터 AI도구 등 고급 기능들을 PC, 모바일<br>에서도 한 번에 이용할 수 있어요.</p>
+			<div class="btn_box no_space">
+				<a href="https://www.polarisoffice.com/editor/whale/hwp?name=DBMS+%EC%84%A4%EA%B3%84%EC%84%9C+%281%29.hwpx&amp;doc=https%3A%2F%2Fviewer.whale.naver.com%2Fmobile-upload%2F26dd835e-b0af-46e3-82c0-ebaa83d2c96e#" class="btn normal primary arrow"><span>회원 가입</span></a>
+			</div>
+		</div>
+	</div>
+</div>
+<!-- //다운로드 -->
+
+<!-- 웨일 팝업 -->
+<div class="layer_modal" id="whale_modal" style="display: none;">
+	<div class="inner">
+		<a href="https://www.polarisoffice.com/editor/whale/hwp?name=DBMS+%EC%84%A4%EA%B3%84%EC%84%9C+%281%29.hwpx&amp;doc=https%3A%2F%2Fviewer.whale.naver.com%2Fmobile-upload%2F26dd835e-b0af-46e3-82c0-ebaa83d2c96e#" class="close"><span>Close</span></a>
+		<div class="whale_benefit" style="margin-top: 0px;">
+			<strong class="tit">Whale 회원 대상 특별 혜택</strong>
+			<p class="c1">지금 폴라리스오피스 <em>회원가입</em>하고<br>Pro 서비스 7일 <em>무료 이용권</em> 받으세요</p>
+			<p class="c2">폴라리스 Pro 이용권?<br>무료로 PDF부터 AI도구 등 고급 기능들을 PC, 모바일<br>에서도 한 번에 이용할 수 있어요.</p>
+			<div class="btn_box no_space">
+				<a href="https://www.polarisoffice.com/editor/whale/hwp?name=DBMS+%EC%84%A4%EA%B3%84%EC%84%9C+%281%29.hwpx&amp;doc=https%3A%2F%2Fviewer.whale.naver.com%2Fmobile-upload%2F26dd835e-b0af-46e3-82c0-ebaa83d2c96e#" class="btn normal primary arrow"><span>회원 가입</span></a>
+			</div>
+		</div>
+	</div>
+</div>
+<!-- //웨일 팝업 -->
+
+
+<!-- coupon -->
+<div id="whale_promotion_poup" class="layer_modal" style="display: none;">
+	<div class="inner">
+		<a href="https://www.polarisoffice.com/editor/whale/hwp?name=DBMS+%EC%84%A4%EA%B3%84%EC%84%9C+%281%29.hwpx&amp;doc=https%3A%2F%2Fviewer.whale.naver.com%2Fmobile-upload%2F26dd835e-b0af-46e3-82c0-ebaa83d2c96e#" class="close"><span>Close</span></a>
+		<div class="coupon_txt">
+			<p class="c1">아직 Whale 회원 대상 특별 혜택을<br> 받지 않으셨나요?</p>
+			<p class="c2">폴라리스오피스 Pro 서비스<br> 7일 무료 이용권 지급</p>
+			<div id="voucher_btn" class="btn_box">
+				<a href="https://www.polarisoffice.com/editor/whale/hwp?name=DBMS+%EC%84%A4%EA%B3%84%EC%84%9C+%281%29.hwpx&amp;doc=https%3A%2F%2Fviewer.whale.naver.com%2Fmobile-upload%2F26dd835e-b0af-46e3-82c0-ebaa83d2c96e#" class="btn primary"><span>이용권 등록 신청 </span></a>
+			</div>
+		</div>
+		<div id="goPoApp" class="btn_box">
+			<a href="https://www.polarisoffice.com/editor/whale/hwp?name=DBMS+%EC%84%A4%EA%B3%84%EC%84%9C+%281%29.hwpx&amp;doc=https%3A%2F%2Fviewer.whale.naver.com%2Fmobile-upload%2F26dd835e-b0af-46e3-82c0-ebaa83d2c96e#" class="btn white"><span>POLARIS OFFICE APP 바로가기 </span></a>
+		</div>
+		<div class="ex_bottm">
+			<a href="https://www.polarisoffice.com/editor/whale/hwp?name=DBMS+%EC%84%A4%EA%B3%84%EC%84%9C+%281%29.hwpx&amp;doc=https%3A%2F%2Fviewer.whale.naver.com%2Fmobile-upload%2F26dd835e-b0af-46e3-82c0-ebaa83d2c96e#" class="do_not_show">다시 보지 않기</a>
+		</div>
+	</div>
+</div>
+<!-- //coupon -->
+
+<!-- 이미지 팝업 -->
+<div id="img_popup" class="layer_modal" style="display:none">
+	<div class="inner thums">
+			<div class="img"><img src="https://www.polarisoffice.com/editor/whale/hwp?name=DBMS+%EC%84%A4%EA%B3%84%EC%84%9C+%281%29.hwpx&amp;doc=https%3A%2F%2Fviewer.whale.naver.com%2Fmobile-upload%2F26dd835e-b0af-46e3-82c0-ebaa83d2c96e" alt=""></div>
+			<a href="https://www.polarisoffice.com/editor/whale/hwp?name=DBMS+%EC%84%A4%EA%B3%84%EC%84%9C+%281%29.hwpx&amp;doc=https%3A%2F%2Fviewer.whale.naver.com%2Fmobile-upload%2F26dd835e-b0af-46e3-82c0-ebaa83d2c96e#" class="close">close</a>
+		</div>
+	</div>
+<p id="LoadingImage" class="loading" style="display: none;"><img src="./DBMS 설계서.hwp_files/loading.gif"></p></div>
+<!-- //이미지 팝업 -->
+
+
+<!-- 해상도 향상 팝업 -->
+<div id="resolution_modal" class="layer_modal" style="display:none">
+	<div class="inner thums quality">
+			<div class="img low"><img src="https://www.polarisoffice.com/editor/whale/hwp?name=DBMS+%EC%84%A4%EA%B3%84%EC%84%9C+%281%29.hwpx&amp;doc=https%3A%2F%2Fviewer.whale.naver.com%2Fmobile-upload%2F26dd835e-b0af-46e3-82c0-ebaa83d2c96e" alt=""></div>
+			<div class="img high"></div>
+			<div class="range_wrap">
+				<input class="range_slider" type="range" value="50" min="0" max="100">
+  				<span class="range_value">50</span>
+			</div>
+			<a href="https://www.polarisoffice.com/editor/whale/hwp?name=DBMS+%EC%84%A4%EA%B3%84%EC%84%9C+%281%29.hwpx&amp;doc=https%3A%2F%2Fviewer.whale.naver.com%2Fmobile-upload%2F26dd835e-b0af-46e3-82c0-ebaa83d2c96e#" class="close">close</a>
+		</div>
+	</div>
+
+<!-- //해상도 향상 팝업 -->
+
+
+<!-- 연동 실패 -->
+<div class="whale_fail_load" style="display:none">
+	<div class="inner">		
+		<div class="box">
+			<h1>POLARIS OFFICE</h1>
+			<dl>
+				<dt>문서 연동에 실패하였습니다.</dt>
+				<dd>
+					Whale 문서 뷰어 화면에서 다시 한 번 '편집' 아이콘을 눌러주세요.<br>
+					지속적으로 오류 발생 시 <a href="https://www.polarisoffice.com/editor/whale/hwp?name=DBMS+%EC%84%A4%EA%B3%84%EC%84%9C+%281%29.hwpx&amp;doc=https%3A%2F%2Fviewer.whale.naver.com%2Fmobile-upload%2F26dd835e-b0af-46e3-82c0-ebaa83d2c96e#" onclick="goHelpDesk(null, true, &#39;https://polarisofficehelp.zendesk.com/hc&#39;)">고객지원</a>으로 문의 바랍니다.</dd>
+			</dl>
+		</div>
+
+		<div class="img"><img src="./DBMS 설계서.hwp_files/whale_thum.png" style="width:382px"></div>
+	</div>
+</div>
+<!-- //연동 실패 -->
+
+<!-- 문구 생성 대기 -->
+<div class="doc_loading" style="display: none;">
+	<span>문서 용량에 따라 추가 시간이 소요될 수 있습니다.<br>열심히 불러오고 있으니 잠시만 기다려 주세요!</span>
+</div>
+<!-- 문구 생성 대기  -->
+
+<script>
+	var rangeSlider = function(){
+	  var slider = $('.range_wrap'),
+		  range = $('.range_slider'),
+		  value = $('.range_value');    
+	  slider.each(function(){
+		value.each(function(){
+		  var value = $(this).prev().attr('value');
+		  $(this).html(value);
+		});
+		range.on('input', function(){
+		  $('.img.high').css('width', this.value + '%');
+		});
+	  });
+	};
+	
+	rangeSlider();
+	</script>
+	<script type="text/javascript" src="./DBMS 설계서.hwp_files/newcommonview.js.다운로드"></script>
+	<script type="text/javascript" src="./DBMS 설계서.hwp_files/polaris.weboffice.js.다운로드"></script>
+			<script type="text/javascript" src="./DBMS 설계서.hwp_files/indexdb_manager.js.다운로드"></script>
+		<script type="text/javascript" src="./DBMS 설계서.hwp_files/office_document_config.js.다운로드"></script>
+			<script type="text/javascript" src="./DBMS 설계서.hwp_files/whaleSetting.js.다운로드"></script>
+			<script type="text/javascript" src="./DBMS 설계서.hwp_files/office_sdk_config.js.다운로드"></script>
+		<script type="text/javascript" src="./DBMS 설계서.hwp_files/office_editor.js.다운로드"></script>
+			<script type="text/javascript" src="./DBMS 설계서.hwp_files/ai_nova.js.다운로드"></script>
+				<script type="text/javascript" src="./DBMS 설계서.hwp_files/ai_listener.js.다운로드"></script>
+			<script type="text/javascript" src="./DBMS 설계서.hwp_files/editFileMenu.js.다운로드"></script>
+			<script type="text/javascript" src="./DBMS 설계서.hwp_files/ListItem.js.다운로드"></script>
+			<script type="text/javascript" src="./DBMS 설계서.hwp_files/ShortLocation.js.다운로드"></script>
+			<script type="text/javascript" src="./DBMS 설계서.hwp_files/DriveLocation.js.다운로드"></script>
+			<script type="text/javascript" src="./DBMS 설계서.hwp_files/recent.js.다운로드"></script>
+			<script type="text/javascript" src="./DBMS 설계서.hwp_files/myLocal.js.다운로드"></script>
+			<script type="text/javascript" src="./DBMS 설계서.hwp_files/myDrive.js.다운로드"></script>
+			<script type="text/javascript" src="./DBMS 설계서.hwp_files/share.js.다운로드"></script>
+			<script type="text/javascript" src="./DBMS 설계서.hwp_files/important.js.다운로드"></script>
+		<script type="text/javascript" src="./DBMS 설계서.hwp_files/whale.js.다운로드"></script>
+		<script type="text/javascript">
+var mac = "false";
+var tesla = ""
+var ischina = 'false'; 
+if(gUA.search("polarispcoffice") != -1  || gUA.indexOf('podialog') != -1){
+	$('div.util_menu').hide();
+	$('div.util_menu').unbind();
+	$('h1 > a').hide();
+};
+
+window.onload = function () {
+	if(document.getElementById('no_again')) {
+		$('#no_again').on('click', function() {
+			if($('#no_again').is(":checked")){
+				var todayDate = new Date();   
+				todayDate.setDate( todayDate.getDate() +365); 
+				document.cookie = "WVRENO" +"="+ "true" + ";expires="+ todayDate.toGMTString() + ";path=/";
+				
+				$('.new_popup.derivation').remove();
+			}else{
+				
+			}
+		});
+	}
+	$(document).click(function (e) {
+		var container = $("div.editBtmPop");
+	    if (!container.is(e.target) && container.has(e.target).length === 0) {
+	        container.hide();
+	    }
+	});
+	 
+}
+</script>
+
+<div class="loading" id="LoadingImageNew"></div>
+<div id="editpopup">
+	<div id="editpopuptext">이 버튼을 선택하면 Polaris Office 앱의 편집 화면으로 이동합니다. 이동할까요?</div>
+	<div id="editpopupbtn">확인</div>
+	<div id="editpopupbottom">
+		<div id="editpopupcheck">
+			<input class="checkbox" type="checkbox">
+			<label></label> 
+			<span id="editchecktext">다시 보지 않기</span>
+		</div>
+	</div>
+</div>
+<div class="new_popup upgrade" style="display:none;">
+	<div class="newBox">
+		<div class="box">
+			<dl class="new_popup_content">
+				<dt>지금 계정을 업그레이드 해보세요!</dt><dd>이 버전을 바로 복원할 수 있습니다.</dd></dl>
+			<p class="btn"><a href="https://www.polarisoffice.com/editor/whale/hwp?name=DBMS+%EC%84%A4%EA%B3%84%EC%84%9C+%281%29.hwpx&amp;doc=https%3A%2F%2Fviewer.whale.naver.com%2Fmobile-upload%2F26dd835e-b0af-46e3-82c0-ebaa83d2c96e#" id="restore_upgrade" class="blue">계정 업그레이드</a>
+							<a href="https://www.polarisoffice.com/editor/whale/hwp?name=DBMS+%EC%84%A4%EA%B3%84%EC%84%9C+%281%29.hwpx&amp;doc=https%3A%2F%2Fviewer.whale.naver.com%2Fmobile-upload%2F26dd835e-b0af-46e3-82c0-ebaa83d2c96e#" id="new_pupup_close">닫기</a></p>
+		</div>
+	</div>
+</div>
+<div class="new_popup_smart upgrade" style="display:none;">
+	<div class="newBox">
+		<div class="box">
+			<dl>
+				<dt>최근 1년 동안 변경된 문서 이력을 확인하고, 15일 이내의 문서를 복원할 수 있습니다.<br>프로 계정으로 업그레이드 하시면<br> 이버전을 바로 복원할 수 있습니다.</dt><dd>업그레이드 하시려면 고객센터로 문의해 주세요.</dd></dl>
+			<p class="btn"><a href="https://www.polarisoffice.com/editor/whale/hwp?name=DBMS+%EC%84%A4%EA%B3%84%EC%84%9C+%281%29.hwpx&amp;doc=https%3A%2F%2Fviewer.whale.naver.com%2Fmobile-upload%2F26dd835e-b0af-46e3-82c0-ebaa83d2c96e#" id="restore_support" class="blue">계정 업그레이드</a>
+							<a href="https://www.polarisoffice.com/editor/whale/hwp?name=DBMS+%EC%84%A4%EA%B3%84%EC%84%9C+%281%29.hwpx&amp;doc=https%3A%2F%2Fviewer.whale.naver.com%2Fmobile-upload%2F26dd835e-b0af-46e3-82c0-ebaa83d2c96e#" id="new_pupup_smart_close">닫기</a></p>
+		</div>
+	</div>
+</div>
+<div id="weblink" class="wrapper"></div>
+<iframe src="./DBMS 설계서.hwp_files/saved_resource(1).html" id="download-iframe" style="display:none;"></iframe>
+<iframe id="_polaris_ai_panel_askdoc" src="./DBMS 설계서.hwp_files/saved_resource(2).html" class="askdoc_pannel" allow="autoplay" style="display: none"></iframe>
+<div id="pageslide" style="left: auto; right: 0px; display:none;">
+			<aside class="panel" id="modal" style="display:block;">
+
+<!--   버전관리가 아닐경우 안보이게 수정   20150126  -->
+
+<section class="msg" id="msg_area">
+				<a href="https://www.polarisoffice.com/editor/whale/hwp?name=DBMS+%EC%84%A4%EA%B3%84%EC%84%9C+%281%29.hwpx&amp;doc=https%3A%2F%2Fviewer.whale.naver.com%2Fmobile-upload%2F26dd835e-b0af-46e3-82c0-ebaa83d2c96e#" class="btn_close">닫기</a>
+				<dl class="info">
+					<dt><span></span><span class="viewcount"></span></dt>
+					<dd><img src="./DBMS 설계서.hwp_files/img_setting(1).png" width="58" height="58"></dd>
+
+				</dl>
+<!--  google ad 
+				<div class="ad_google02 adsense" id="viewer_comment_ad">
+					<div class="ad_box"></div>
+				</div>	
+				google ad end -->
+<div class="comment">
+					<h3 id="totalCnt">코멘트</h3>
+					<p class="input">
+						<span class="box">
+						<label for="comment_input">코멘트를 남겨주세요.</label>
+						<textarea id="comment_input"></textarea>
+						<span class="txt" style="display: inline;">1024</span>
+						<a href="https://www.polarisoffice.com/editor/whale/hwp?name=DBMS+%EC%84%A4%EA%B3%84%EC%84%9C+%281%29.hwpx&amp;doc=https%3A%2F%2Fviewer.whale.naver.com%2Fmobile-upload%2F26dd835e-b0af-46e3-82c0-ebaa83d2c96e#" style="display: inline;" id="sendComment">등록</a></span>
+					</p>
+					<div class="list share" style="display:;">
+						<div id="comment"><div id="mCSB_2"><div id="mCSB_2_container" class="mCSB_container mCS_y_hidden mCS_no_scrollbar_y" style="position: relative; left: 0px; top: 0px;" dir="ltr">		
+							<p class="btn_more"><a href="https://www.polarisoffice.com/editor/whale/hwp?name=DBMS+%EC%84%A4%EA%B3%84%EC%84%9C+%281%29.hwpx&amp;doc=https%3A%2F%2Fviewer.whale.naver.com%2Fmobile-upload%2F26dd835e-b0af-46e3-82c0-ebaa83d2c96e#" id="fetch">더보기</a></p>
+						</div>
+						<div id="label_nocomment"><div>아직 코멘트가 없습니다.</div></div>						
+						<div id="mCSB_2_scrollbar_vertical" class="mCSB_scrollTools mCSB_2_scrollbar mCS-rounded mCSB_scrollTools_vertical" style="display: none;"><div class="mCSB_draggerContainer"><div id="mCSB_2_dragger_vertical" class="mCSB_dragger" style="position: absolute; min-height: 5px; top: 0px;" oncontextmenu="return false;"><div class="mCSB_dragger_bar"></div></div><div class="mCSB_draggerRail"></div></div></div></div></div>
+					</div>
+				</div>
+</section>
+<!--   버전관리 일경우 보이게 수정 20150126  -->
+</aside>
+	
+</div> 	
+	<div id="pc_support"></div>
+<div id="pc_upgrade"></div>
+<div id="orange_upgrade"></div>
+
+<iframe class="openOffice" width="0" height="0" style="display:block" src="./DBMS 설계서.hwp_files/saved_resource(3).html"></iframe>
+<iframe src="./DBMS 설계서.hwp_files/saved_resource(4).html" id="_polaris_ai_panel_aiWrite" class="ai_panel_frame" style="display:none"></iframe>
+	<iframe src="./DBMS 설계서.hwp_files/saved_resource(5).html" id="_polaris_ai_panel_txt2img" class="ai_panel_frame" style="display:none"></iframe>
+<script type="text/javascript" src="./DBMS 설계서.hwp_files/accesslog.js.다운로드"></script>
+<script type="text/javascript" src="./DBMS 설계서.hwp_files/jquery.dotdotdot-1.5.9.min.js.다운로드"></script>
+<script type="text/javascript" src="./DBMS 설계서.hwp_files/jsencrypt.min.js.다운로드"></script>
+
+<!--[If gt IE 8]>
+<script type="text/javascript" src="https://polink-static-contents.polarisoffice.com/web/maxage1/common/js/lib/jquery.zclip.min.js"></script>
+<![endif]-->
+<!--[if !IE]><!--><script type="text/javascript" src="./DBMS 설계서.hwp_files/jquery.zclip.min.js.다운로드"></script><!--<![endif]-->
+
+<!-- <script src="http://qzonestyle.gtimg.cn/qzone/app/qzlike/qzopensl.js#jsdate=20111201" charset="utf-8"></script> -->
+
+<script type="text/javascript" src="./DBMS 설계서.hwp_files/common.js.다운로드"></script>
+<script type="text/javascript" src="./DBMS 설계서.hwp_files/common_drive.js.다운로드"></script>
+
+<script type="text/javascript" src="./DBMS 설계서.hwp_files/popup_common.js.다운로드"></script>
+<script type="text/javascript" src="./DBMS 설계서.hwp_files/popup_message.js.다운로드"></script>
+
+<script type="text/javascript" src="./DBMS 설계서.hwp_files/activity_resource.js.다운로드"></script>
+
+<!-- <script type="text/javascript" src="https://polink-static-contents.polarisoffice.com/web/maxage1/common/js/lib/fcm/firebase-app.js"></script>
+<script type="text/javascript" src="https://polink-static-contents.polarisoffice.com/web/maxage1/common/js/lib/fcm/firebase-messaging.js"></script> -->
+<script type="text/javascript" src="./DBMS 설계서.hwp_files/snsapi.js.다운로드"></script>
+<script type="text/javascript" src="./DBMS 설계서.hwp_files/sha256.js.다운로드"></script>
+<script type="text/javascript" src="./DBMS 설계서.hwp_files/login.js.다운로드"></script>
+<script type="text/javascript" src="./DBMS 설계서.hwp_files/socialAccount.js.다운로드"></script>
+<script type="text/javascript" src="./DBMS 설계서.hwp_files/localytics.js.다운로드"></script>
+<script type="text/javascript" src="./DBMS 설계서.hwp_files/localytics_util.js.다운로드"></script>
+<script type="text/javascript">
+	$('document').ready(function(){
+			var key = "21ce763f8f4c25258113e88-4a079d4a-1606-11e3-934b-009c5fda0a25";
+			if( localyticsInitializeAndGetObject ) {
+				localyticsInitializeAndGetObject(key);
+			}
+	});
+</script>
+<script type="text/javascript" src="./DBMS 설계서.hwp_files/pcpopup_cooperation.js.다운로드"></script>
+<script type="text/javascript" src="./DBMS 설계서.hwp_files/pcpopup_tree.js.다운로드"></script>
+<script type="text/javascript" src="./DBMS 설계서.hwp_files/jquery.base64.js.다운로드"></script>
+<script type="text/javascript" src="./DBMS 설계서.hwp_files/base62.min.js.다운로드"></script>
+<span id="hidespan" style="display: none;"></span>   
+	<iframe name="hidden_iframe" src="./DBMS 설계서.hwp_files/hidden_iframe.html" style="width:0;height:0;visibility:hidden; display:none;"></iframe>
+	<div id="address" class="wrapper"></div> 
+	<div id="logincontainer" class="bx_input init popup"></div>  
+	<div id="registcontainer" class="bx_input init popup"></div>  
+	<div id="pouploader" class="init" style="display:none;"></div> 
+ 
+ <div id="chat" class="init messenger"></div>
+ <script>
+  var gtmId = "GTM-TZZ79G";
+  if (window.location.href.indexOf("vf-ca") >= 0) {
+    gtmId = "GTM-KFKZ2ZWK";
+  }
+</script>
+<!-- Google Tag Manager -->
+<script>
+  (function (w, d, s, l, i) {
+    w[l] = w[l] || [];
+    w[l].push({
+      "gtm.start": new Date().getTime(),
+      event: "gtm.js",
+    });
+    var f = d.getElementsByTagName(s)[0],
+      j = d.createElement(s),
+      dl = l != "dataLayer" ? "&l=" + l : "";
+    j.async = true;
+    j.src = "https://www.googletagmanager.com/gtm.js?id=" + i + dl;
+    f.parentNode.insertBefore(j, f);
+  })(window, document, "script", "dataLayer", gtmId);
+</script>
+<!-- End Google Tag Manager -->
+<!-- Google Tag Manager (noscript) -->
+<noscript>
+  <iframe
+    src="https://www.googletagmanager.com/ns.html?id=GTM-TZZ79G"
+    height="0"
+    width="0"
+    style="display: none; visibility: hidden"
+  >
+  </iframe>
+</noscript>
+<!-- End Google Tag Manager (noscript) -->
+
+<div class="layer_pop research" style="display: none">
+  <div class="inner">
+    <div class="pos"><a href="https://www.polarisoffice.com/editor/whale/hwp?name=DBMS+%EC%84%A4%EA%B3%84%EC%84%9C+%281%29.hwpx&amp;doc=https%3A%2F%2Fviewer.whale.naver.com%2Fmobile-upload%2F26dd835e-b0af-46e3-82c0-ebaa83d2c96e#" class="close researchClose">close</a></div>
+    <div class="head">
+      <h1><span>회원 정보 입력하기</span></h1>
+      <p>
+        단, 10초만에 회원정보 입력하고,<br><em>맞춤 혜택 정보</em>를
+        받아보세요.
+      </p>
+    </div>
+
+    <div class="cont">
+      <div class="section_box">
+        <h2>회원님의 성별을 선택해주세요.</h2>
+        <div class="custom_radio">
+          <label><input type="radio" value="M" name="sex"><span>남성</span></label>
+          <label><input type="radio" value="W" name="sex"><span>여성</span></label>
+        </div>
+      </div>
+
+      <div class="section_box">
+        <h2>태어나신 출생 연도를 입력해주세요.</h2>
+        <div class="custom_input">
+          <label><input type="number" id="birthYear" maxlength="4" placeholder="1990"><span>년</span></label>
+        </div>
+        <p class="descript" id="errorYear" style="display: none">
+          유효한 4자리의 출생 연도를 입력해주세요.
+        </p>
+      </div>
+
+      <div class="section_box">
+        <h2>무슨 일을 하고 계신가요?</h2>
+        <div class="custom_select">
+          <select name="job" required="">
+            <option value="" disabled="" selected="">직업을 선택해 주세요.</option>
+            <option value="0">기타(직접입력)</option>
+            <option value="2">대학(원)생</option>
+            <option value="3">회사원(생산·서비스·사무·관리·IT 등)</option>
+            <option value="4">자영업자</option>
+            <option value="5">전업주부·학부모</option>
+            <option value="6">전문직(의료·법률·연구·종교 등)</option>
+            <option value="7">프리랜서(작가·강사·영상 등)</option>
+            <option value="8">무직(취업준비·퇴직 등)</option>
+          </select>
+        </div>
+        <div class="custom_input">
+          <label><input type="text" placeholder="기타 선택 후 직접 입력" maxlength="30" id="otherJob"></label>
+        </div>
+        <!-- <div class="custom_radio col3">
+                    <label><input type="radio" value="1" name="job"><span>학생</span></label>
+                    <label><input type="radio" value="2" name="job" ><span>대학(원)생</span></label>
+                    <label><input type="radio" value="3" name="job" ><span>회사원</span></label>
+                    <label><input type="radio" value="4" name="job" ><span>자영업자</span></label>
+                    <label><input type="radio" value="5" name="job" ><span>학부모</span></label>
+                    <label><input type="radio" value="0" name="job" ><span>기타</span></label>
+                </div>
+                <div class="custom_input">
+                    <label><input type="text" placeholder="기타 선택 후 직접 입력" maxlength="30" id="otherJob"></label>
+                </div> -->
+      </div>
+
+      <div class="section_box">
+        <h2>폴라리스 오피스를 어떻게 알게 되셨나요?</h2>
+        <div class="custom_select">
+          <select name="funnel" required="">
+            <option value="0" disabled="" selected="">
+              알게된 경로를 선택해 주세요.
+            </option>
+            <option value="1">기타(직접입력)</option>
+            <option value="2">지인 추천을 받고</option>
+            <option value="3">커뮤니티 정보를 통해서</option>
+            <option value="4">외부 또는 인터넷 광고를 통해서</option>
+            <option value="5">유튜브·인스타 등의 SNS를 통해서</option>
+            <option value="6">네이버, 구글 등의 검색을 통해서</option>
+            <option value="7">이미 알고 있는 서비스여서</option>
+          </select>
+        </div>
+        <div class="custom_input">
+          <label><input type="text" placeholder="기타 선택 후 직접 입력" maxlength="30" id="otherFunnel"></label>
+        </div>
+      </div>
+    </div>
+    <div class="trans_bg">&nbsp;</div>
+    <div class="bottom_warp">
+      <div class="section_box">
+        <label class="checkbox">
+          <input type="checkbox" id="pc_privacy_ko" title="개인정보 수집 및 이용 선택">
+          <span><strong><a href="https://www.polarisoffice.com/editor/whale/hwp?name=DBMS+%EC%84%A4%EA%B3%84%EC%84%9C+%281%29.hwpx&amp;doc=https%3A%2F%2Fviewer.whale.naver.com%2Fmobile-upload%2F26dd835e-b0af-46e3-82c0-ebaa83d2c96e#" id="privacyOptional">개인정보 수집 및 이용</a></strong>에 동의합니다.</span>
+        </label>
+      </div>
+      <div class="btn_wrap">
+        <a href="javascript:void(0)" id="seeNextTime" class="btn white seeNextTime"><span>다음에 보기</span></a>
+        <a href="https://www.polarisoffice.com/editor/whale/hwp?name=DBMS+%EC%84%A4%EA%B3%84%EC%84%9C+%281%29.hwpx&amp;doc=https%3A%2F%2Fviewer.whale.naver.com%2Fmobile-upload%2F26dd835e-b0af-46e3-82c0-ebaa83d2c96e#" class="btn blue disabled sendSurvey" id="sendSurvey"><span>입력완료<em class="aiplus">AI크레딧 추가 지급!</em></span></a>
+      </div>
+    </div>
+
+    <!-- 입력 완료 -->
+    <div class="complate_research complete" style="display: none">
+      <div class="inner">
+        <h1>입력이 완료되었습니다.</h1>
+        <p class="level basic smart pro ai" style="display: none">
+          <em>100 크레딧 지급 완료!</em>
+          추가 지급된 AI 크레딧으로 폴라리스 AI를 더 활용해보세요.
+        </p>
+        <p class="level aiplus" style="display: none">
+          입력하신 정보를 기반으로 프로모션 소식과 혜택을 안내 드립니다.
+        </p>
+        <div class="btn_wrap">
+          <a href="https://www.polarisoffice.com/editor/whale/hwp?name=DBMS+%EC%84%A4%EA%B3%84%EC%84%9C+%281%29.hwpx&amp;doc=https%3A%2F%2Fviewer.whale.naver.com%2Fmobile-upload%2F26dd835e-b0af-46e3-82c0-ebaa83d2c96e#" class="btn grey researchComplete"><span>확인</span></a>
+        </div>
+      </div>
+    </div>
+    <!-- //입력 완료 -->
+
+    <!-- 오류 -->
+    <div class="complate_research error" style="display: none">
+      <div class="inner">
+        <h1></h1>
+        <div class="btn_wrap">
+          <a href="https://www.polarisoffice.com/editor/whale/hwp?name=DBMS+%EC%84%A4%EA%B3%84%EC%84%9C+%281%29.hwpx&amp;doc=https%3A%2F%2Fviewer.whale.naver.com%2Fmobile-upload%2F26dd835e-b0af-46e3-82c0-ebaa83d2c96e#" class="btn grey researchComplete"><span>확인</span></a>
+        </div>
+      </div>
+    </div>
+    <!-- //오류 -->
+  </div>
+</div>
+<div id="donotshow_30d"></div>
+<div id="donotshow"></div>
+<div id="popup_close"></div>
+<script type="text/javascript">
+  document.write(
+    '<script type="text/javascript" src="' +
+      CF_PATH +
+      '/r_js/popup_research.js"></' +
+      "script>"
+  );
+</script><script type="text/javascript" src="./DBMS 설계서.hwp_files/popup_research.js.다운로드"></script><link href="./DBMS 설계서.hwp_files/research.css" rel="stylesheet">
+<!-- Google tag (gtag.js) --> <script async="" src="./DBMS 설계서.hwp_files/js(1)"></script> <script> window.dataLayer = window.dataLayer || []; function gtag(){dataLayer.push(arguments);} gtag('js', new Date()); gtag('config', 'G-88G4YNZ034'); </script>
+	<script src="./DBMS 설계서.hwp_files/crypto-js.min.js.다운로드" type="text/javascript"></script>
+<script src="./DBMS 설계서.hwp_files/hmac-sha256.min.js.다운로드" type="text/javascript"></script>
+<script src="./DBMS 설계서.hwp_files/enc-base64.min.js.다운로드" type="text/javascript" gapi_processed="true"></script>
+
+
+<iframe allow="join-ad-interest-group" data-tagging-id="G-88G4YNZ034" data-load-time="1734400881555" height="0" width="0" src="./DBMS 설계서.hwp_files/rul.html" style="display: none; visibility: hidden;"></iframe><div id="poTree" class="init"></div><iframe scrolling="no" frameborder="0" allowtransparency="true" src="./DBMS 설계서.hwp_files/widget_iframe.2f70fb173b9000da126c79afe2098f02.html" title="Twitter settings iframe" style="display: none;"></iframe><iframe id="rufous-sandbox" scrolling="no" frameborder="0" allowtransparency="true" allowfullscreen="true" style="position: absolute; visibility: hidden; display: none; width: 0px; height: 0px; padding: 0px; border: none;" title="Twitter analytics iframe" src="./DBMS 설계서.hwp_files/saved_resource(6).html"></iframe></body><whale-quicksearch translate="no"><template shadowrootmode="closed"><style></style><div class="quicksearch"></div></template></whale-quicksearch></html>
