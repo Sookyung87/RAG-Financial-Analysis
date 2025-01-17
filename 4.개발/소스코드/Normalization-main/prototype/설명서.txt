@@ -1,0 +1,17 @@
+1. requirements.txt에 명시된 라이브러리를 설치한다. (pip install ~~)
+2. main.py 파일을 실행한다.
+3. 작동완료!
+
+main.py #웹프로그램을 실행하는 코드
+app.py #메인코드
+chat_request.py #gpt api를 관리하는 코드 (오류 출력, gpt 버전 등)
+static #자바 스크립트
+templates #html 웹 디자인
+requirements.txt #요구 라이브러리
+
+API 키 : REMOVED_OPENAI_API_KEY
+REMOVED_OPENAI_API_KEY
+서버 gui 접속 : comjsh.store:10000 (10000번 포트 접속)
+Webmin id : root
+Webmin pw : Comjsh123!
+왼쪽 tools -> file manager -> home -> opc -> myapp 들어가면 github 데이터 저장되어있음.

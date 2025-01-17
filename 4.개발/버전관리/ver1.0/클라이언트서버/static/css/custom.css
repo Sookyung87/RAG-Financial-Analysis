@@ -1,0 +1,23 @@
+/* Custom styles to complement Bootstrap theme */
+.card {
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.form-control:focus {
+    box-shadow: 0 0 0 0.2rem rgba(var(--bs-primary-rgb), 0.25);
+}
+
+#resultArea {
+    background-color: rgba(var(--bs-secondary-bg-rgb), 0.1);
+    padding: 1rem;
+    border-radius: 6px;
+}
+
+.table {
+    margin-bottom: 0;
+}
+
+.spinner-border {
+    margin-right: 0.5rem;
+}
