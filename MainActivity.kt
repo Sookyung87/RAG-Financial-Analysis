@@ -29,6 +29,53 @@ import androidx.compose.material.icons.filled.Search
 import androidx.compose.ui.text.input.ImeAction
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.room.util.query
+import kotlinx.coroutines.launch
+import retrofit2.Retrofit
+import retrofit2.converter.gson.GsonConverterFactory
+import retrofit2.http.Body
+import retrofit2.http.POST
+import retrofit2.Call
+import retrofit2.http.GET
+import retrofit2.http.Path
+import kotlin.coroutines.resume
+import kotlin.coroutines.suspendCoroutine
+
+data class QuestionRequest(val question: String)
+data class ResponseData(val answer: String)
+
+interface ChatApi {
+    @POST("http://comjsh.store/rag") // 서버의 엔드포인트 (http://comjsh.store/rag)
+    fun sendQuestion(@Body request: QuestionRequest): Call<ResponseData>
+}
+
+
+
+object RetrofitInstance {
+    private const val BASE_URL = "http://comjsh.store/"
+
+    val api: ChatApi by lazy {
+        Retrofit.Builder()
+            .baseUrl(BASE_URL)
+            .addConverterFactory(GsonConverterFactory.create())
+            .build()
+            .create(ChatApi::class.java)
+    }
+}
+
+
+suspend fun sendQuestionToServer(question: String): String {
+    return try {
+        val response = RetrofitInstance.api.sendQuestion(QuestionRequest(question)).execute()
+        if (response.isSuccessful) {
+            response.body()?.answer ?: "응답을 받을 수 없습니다."
+        } else {
+            "서버 오류: ${response.code()}"
+        }
+    } catch (e: Exception) {
+        "네트워크 오류: ${e.localizedMessage}"
+    }
+}
+
 
 
 class MainActivity : ComponentActivity() {
@@ -174,6 +221,7 @@ fun QuestionScreen() {
 @Composable
 fun SearchBar(query: TextFieldValue, onQuerySubmitted: (String) -> Unit) {
     var textState by remember { mutableStateOf(query) }
+    val coroutineScope = rememberCoroutineScope() // ✅ CoroutineScope 추가
 
     Box(
         modifier = Modifier
@@ -189,31 +237,38 @@ fun SearchBar(query: TextFieldValue, onQuerySubmitted: (String) -> Unit) {
             TextField(
                 value = textState.text,
                 onValueChange = { textState = TextFieldValue(it) },
-                keyboardOptions = KeyboardOptions(
-                    imeAction = ImeAction.Done // ✅ 키보드 "완료" 버튼 활성화
-                ),
+                keyboardOptions = KeyboardOptions(imeAction = ImeAction.Done),
                 keyboardActions = KeyboardActions(
                     onDone = {
-                        if (textState.text.isNotBlank()) { // 빈 입력 방지
-                            onQuerySubmitted(textState.text) // ✅ "Enter" 키 입력 시 실행
+                        if (textState.text.isNotBlank()) {
+                            val userQuery = textState.text
                             textState = TextFieldValue("") // ✅ 입력창 초기화
+
+                            // ✅ 네트워크 요청을 비동기로 실행
+                            coroutineScope.launch {
+                                val response = sendQuestionToServer(userQuery)
+                                onQuerySubmitted(response) // ✅ UI에 반영
+                            }
                         }
                     }
                 ),
-                singleLine = true, // ✅ 한 줄 입력만 허용
+                singleLine = true,
                 modifier = Modifier.weight(1f),
-                colors = TextFieldDefaults.colors( // ✅ 색상 변경
-                    focusedContainerColor = Color.White, // 포커스 되었을 때 배경색
-                    unfocusedContainerColor = Color.White, // 포커스 해제 시 배경색
-                    disabledContainerColor = Color.Gray, // 비활성화 시 배경색
-                    focusedIndicatorColor = Color.Transparent, // 포커스 상태의 테두리 색 (없앰)
-                    unfocusedIndicatorColor = Color.Transparent // 기본 상태의 테두리 색 (없앰)
+                colors = TextFieldDefaults.colors(
+                    focusedContainerColor = Color.White,
+                    unfocusedContainerColor = Color.White,
+                    disabledContainerColor = Color.Gray,
+                    focusedIndicatorColor = Color.Transparent,
+                    unfocusedIndicatorColor = Color.Transparent
                 )
             )
             Icon(imageVector = Icons.Default.Search, contentDescription = "검색")
         }
     }
 }
+
+
+
 
 
 @Composable
