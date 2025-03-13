@@ -39,12 +39,13 @@ import retrofit2.http.GET
 import retrofit2.http.Path
 import kotlin.coroutines.resume
 import kotlin.coroutines.suspendCoroutine
+import android.util.Log
 
 data class QuestionRequest(val question: String)
 data class ResponseData(val answer: String)
 
 interface ChatApi {
-    @POST("http://comjsh.store/rag") // 서버의 엔드포인트 (http://comjsh.store/rag)
+    @POST("rag")
     fun sendQuestion(@Body request: QuestionRequest): Call<ResponseData>
 }
 
@@ -63,18 +64,29 @@ object RetrofitInstance {
 }
 
 
-suspend fun sendQuestionToServer(question: String): String {
-    return try {
-        val response = RetrofitInstance.api.sendQuestion(QuestionRequest(question)).execute()
-        if (response.isSuccessful) {
-            response.body()?.answer ?: "응답을 받을 수 없습니다."
-        } else {
-            "서버 오류: ${response.code()}"
+fun sendQuestionToServer(question: String, onResult: (String) -> Unit) {
+    Log.d("API_REQUEST", "질문 요청 보냄: $question")
+
+    RetrofitInstance.api.sendQuestion(QuestionRequest(question)).enqueue(object : retrofit2.Callback<ResponseData> {
+        override fun onResponse(call: Call<ResponseData>, response: retrofit2.Response<ResponseData>) {
+            if (response.isSuccessful) {
+                Log.d("API_RESPONSE", "서버 응답 성공: ${response.body()?.answer}")
+                onResult(response.body()?.answer ?: "응답을 받을 수 없습니다.")
+            } else {
+                val errorResponse = response.errorBody()?.string()
+                Log.e("API_ERROR", "서버 오류: ${response.code()}, 응답: $errorResponse")
+                onResult("서버 오류: ${response.code()} - $errorResponse")
+            }
         }
-    } catch (e: Exception) {
-        "네트워크 오류: ${e.localizedMessage}"
-    }
+
+        override fun onFailure(call: Call<ResponseData>, t: Throwable) {
+            Log.e("API_ERROR", "네트워크 오류 발생", t)
+            onResult("네트워크 오류: ${t.localizedMessage ?: "알 수 없는 오류"}")
+        }
+    })
 }
+
+
 
 
 
@@ -151,10 +163,9 @@ fun TopAppBar() {
 
 @Composable
 fun QuestionScreen() {
-    var query by remember { mutableStateOf(TextFieldValue("")) } // 검색어 상태 저장
-    var results by remember { mutableStateOf<List<Pair<String, String>>>(emptyList()) } // 대화 내역
-    val listState = rememberLazyListState() // LazyColumn의 스크롤 상태
-
+    var query by remember { mutableStateOf(TextFieldValue("")) } // ✅ 사용자 입력 상태
+    var results by remember { mutableStateOf<List<Pair<String, String>>>(emptyList()) } // ✅ 대화 내역을 상태로 관리
+    val listState = rememberLazyListState() // ✅ LazyColumn의 스크롤 상태
 
     // ✅ 새로운 메시지가 추가될 때 자동 스크롤
     LaunchedEffect(results.size) {
@@ -193,13 +204,13 @@ fun QuestionScreen() {
             state = listState,
             modifier = Modifier
                 .fillMaxWidth()
-                .weight(1f) // 남은 공간을 전부 차지
+                .weight(1f) // ✅ 남은 공간을 전부 차지
                 .padding(8.dp),
-            reverseLayout = false // 가장 최근 메시지가 아래쪽에 배치됨
+            reverseLayout = false
         ) {
             items(results) { (question, answer) ->
-                ChatBubble(text = question, isUser = true)  // 사용자 질문
-                ChatBubble(text = answer, isUser = false)  // AI 응답
+                ChatBubble(text = question, isUser = true)  // ✅ 사용자 질문
+                ChatBubble(text = answer, isUser = false)  // ✅ AI 응답
             }
         }
 
@@ -207,15 +218,16 @@ fun QuestionScreen() {
 
         // ✅ 검색창
         SearchBar(query, onQuerySubmitted = { newQuery ->
-            query = TextFieldValue("") // 입력창 초기화
-            val response = "응답: \"$newQuery\"에 대한 답변입니다."
-            results = results + listOf(Pair(newQuery, response)) // ✅ 새 대화 추가
+            query = TextFieldValue("") // ✅ 입력창 초기화
 
-
-
+            // ✅ UI 변경을 안정적으로 처리하기 위해 네트워크 요청 후 변경
+            sendQuestionToServer(newQuery) { response ->
+                results = results + listOf(Pair(newQuery, response)) // ✅ 서버 응답 후 UI 업데이트
+            }
         })
     }
 }
+
 
 
 @Composable
@@ -246,8 +258,9 @@ fun SearchBar(query: TextFieldValue, onQuerySubmitted: (String) -> Unit) {
 
                             // ✅ 네트워크 요청을 비동기로 실행
                             coroutineScope.launch {
-                                val response = sendQuestionToServer(userQuery)
-                                onQuerySubmitted(response) // ✅ UI에 반영
+                                sendQuestionToServer(userQuery) { response ->
+                                    onQuerySubmitted(response) // ✅ UI에 반영
+                                }
                             }
                         }
                     }
@@ -266,6 +279,8 @@ fun SearchBar(query: TextFieldValue, onQuerySubmitted: (String) -> Unit) {
         }
     }
 }
+
+
 
 
 
