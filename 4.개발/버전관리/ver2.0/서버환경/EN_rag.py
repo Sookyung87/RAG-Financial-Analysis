@@ -43,7 +43,7 @@ def create_vectorstore(model_name="text-embedding-3-small"):
     
     # 상대 경로로 폴더에 저장
     base_dir = os.path.dirname(os.path.abspath(__file__))  # 현재 스크립트의 절대 경로
-    vs_file = os.path.join(base_dir, f'{model_name.replace("/", "_")}_FAISS')  # 폴더 이름에 특수문자 없이 저장
+    vs_file = os.path.join(base_dir, 'EN-text-embedding-3-small_FAISS')
     
     if not os.path.exists(vs_file):  # 경로가 없으면 생성
         os.makedirs(vs_file)
@@ -57,22 +57,30 @@ def format_docs(docs):
     return "\n\n".join(doc.page_content for doc in docs)
 
 def top_5_docs(query):
-    """유사도 기반으로 상위 5개 문서 검색"""
+    """유사도 기반으로 상위 5개 문서 검색 (중복 제거)"""
     vectorstore = create_vectorstore()
-    top_k = 5
+    top_k = 10  # 더 많은 문서를 가져와서 중복을 필터링
     retrieved_docs_with_scores = vectorstore.similarity_search_with_score(query, k=top_k)
-    
-    reference_docs = []
-    for rank, (doc, score) in enumerate(retrieved_docs_with_scores, 1):
-        reference_docs.append({
-            "rank": rank,
-            "score": round(float(score), 2),  
-            "content": doc.page_content[:300] + "...",  # 내용 일부만 반환
-            "title": doc.metadata["title"],  # 제목 추가
-            "link": doc.metadata["link"]  # 링크 추가
-        })
-    
-    return reference_docs 
+
+    seen_titles = set()
+    unique_docs = []
+
+    for doc, score in retrieved_docs_with_scores:
+        title = doc.metadata["title"]
+        if title not in seen_titles:
+            seen_titles.add(title)
+            unique_docs.append({
+                "rank": len(unique_docs) + 1,
+                "score": round(float(score), 2),
+                "content": doc.page_content[:300] + "...",
+                "title": title,
+                "link": doc.metadata["link"]
+            })
+        
+        if len(unique_docs) >= 5:  # 최대 5개 문서까지만 저장
+            break
+
+    return unique_docs
 
 def get_rag_answer(query, model_name="text-embedding-3-small"):
     """질문을 받아 RAG 시스템을 통해 답변 생성"""
@@ -123,6 +131,6 @@ def get_rag_answer(query, model_name="text-embedding-3-small"):
     
     return result
 
-# query = "나도브릭의 유상증자는 어떻게 진행되나요?"
+# query = "LG전자의 연봉 1위는 누구니?"
 # answer = get_rag_answer(query)
 # print(answer)
